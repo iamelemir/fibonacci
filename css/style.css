@@ -7,7 +7,7 @@ body {
     top: 25%;
     left: 25%;
     width: 50%;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(49, 127, 190);
     padding: 2%;
     border: 2px dashed #000;
     border-radius: 10px;
@@ -15,4 +15,13 @@ body {
 
 .box {
     display: grid;
+}
+
+.btn {
+    background-color: rgb(209, 194, 57);
+    width: 50%;
+    height: 5vh;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
