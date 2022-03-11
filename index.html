@@ -35,7 +35,7 @@
 
                 let serie = [];
 
-                function showTime() {
+                function serieFibo() {
 
 
                     var fibonacci = [];
@@ -49,17 +49,20 @@
 
                     var arr = [];
                     arr.push(nX, nY)
-                        // console.log(arr)
 
-                    for (var i = nY; i < arr; i++) {
-                        arr[i] = arr[i - nY] + arr[i - nX];
+
+                    for (var i = nY; i < nN; i++) {
+                        arr[i] = arr[i - nX] + arr[i - nY];
+
+                        alert(arr)
                     }
-                    console.log(arr)
+
+
                 }
             </script>
             <br>
             <br>
-            <button onclick=showTime()>Restar Fibo Serie!</button>
+            <button onclick=serieFibo()>Restar Fibo Serie!</button>
 
         </div>
     </div>
