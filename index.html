@@ -24,42 +24,32 @@
                 let x = [];
                 let y = [];
 
+                x.push(msg[0]);
+                y.push(msg[1]);
+
                 let segundo = [];
                 segundo.push(horaActual.getSeconds().toString());
                 const nSegundo = new String(segundo);
                 let n = [];
                 n.push(nSegundo[1]);
 
-                x.push(msg[0]);
-                y.push(msg[1]);
-
-                let serie = [];
-
                 function serieFibo() {
 
+                    var nX = parseInt(x)
+                    var nY = parseInt(y)
+                    var nN = parseInt(n) //limite
 
-                    var fibonacci = [];
-                    fibonacci[0] = x[0];
-                    fibonacci[1] = y[0];
-                    var number = n[0];
+                    var fibo = [nX, nY];
 
-                    var nX = parseInt(fibonacci[0])
-                    var nY = parseInt(fibonacci[1])
-                    var nN = parseInt(number)
-
-                    var arr = [];
-                    arr.push(nX, nY)
-
-
-                    for (var i = nY; i < nN; i++) {
-                        arr[i] = arr[i - nX] + arr[i - nY];
+                    for (i = 2; i <= nN; i++) {
+                        fibo.push(fibo[i - 1] + fibo[i - 2]);
+                        alert(fibo)
                     }
-                    alert(arr)
-
-
                 }
             </script>
             <br>
+            <h1>
+            </h1>
             <br>
             <button class="btn" onclick=serieFibo()>Restar Fibo Serie!</button>
 
