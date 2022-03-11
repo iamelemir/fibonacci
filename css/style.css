@@ -1,11 +1,17 @@
+body {
+    background-color: aliceblue;
+}
+
 .container {
     position: absolute;
     top: 25%;
     left: 25%;
     width: 50%;
     height: 50%;
-    background-color: blue;
+    background-color: rgb(219, 219, 219);
     padding: 2%;
+    border: 2px dashed #000;
+    border-radius: 10px;
 }
 
 .box {
