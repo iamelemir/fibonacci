@@ -6,16 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fibonacci Serie</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="Js/logic.js"></script>
+    <!-- <script src="Js/logic.js"></script> -->
 </head>
 
 <body>
     <div class="container">
         <div class="box">
             <h1>Serie Fibonacci</h1>
-            <h1>Hora actual con minutos y segundos</h1>
-            <h1>renderizar los datos de los resultados</h1>
-            <h1>Boton de reiniciar</h1>
+            <script>
+                var horaActual = new Date();
+                var hora = horaActual.getHours() + ':' + horaActual.getMinutes() + ':' + horaActual.getSeconds();
+                document.writeln("Hora Actual" + " " + hora);
+
+                let minutos = [];
+                minutos.push(horaActual.getMinutes().toString());
+                const msg = new String(minutos);
+                let x = [];
+                let y = [];
+
+                let segundo = [];
+                segundo.push(horaActual.getSeconds().toString());
+                const nSegundo = new String(segundo);
+                let n = [];
+                n.push(nSegundo[1]);
+
+                x.push(msg[0]);
+                y.push(msg[1]);
+
+                let serie = [];
+
+                function showTime() {
+
+
+                    var fibonacci = [];
+                    fibonacci[0] = x[0];
+                    fibonacci[1] = y[0];
+                    var number = n[0];
+
+                    var nX = parseInt(fibonacci[0])
+                    var nY = parseInt(fibonacci[1])
+                    var nN = parseInt(number)
+
+                    var arr = [];
+                    arr.push(nX, nY)
+                        // console.log(arr)
+
+                    for (var i = nY; i < arr; i++) {
+                        arr[i] = arr[i - nY] + arr[i - nX];
+                    }
+                    console.log(arr)
+                }
+            </script>
+            <br>
+            <br>
+            <button onclick=showTime()>Restar Fibo Serie!</button>
 
         </div>
     </div>
